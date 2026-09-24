@@ -1,5 +1,5 @@
-// Set the current year in the footer.
-const yearEl = document.getElementById("year");
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
-}
+/* The only script on the page: fill the copyright year. */
+(function () {
+  var el = document.getElementById("year");
+  if (el) el.textContent = new Date().getFullYear();
+})();

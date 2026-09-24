@@ -3,62 +3,363 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A brief description of your website." />
-  <title>My Website</title>
+  <meta name="description" content="UX and visual design lead for enterprise products. Strategy, systems, and interfaces that hold up in the boardroom and in daily use." data-draft="true" />
+  <title>Zerik — UX &amp; Visual Design Lead</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a class="brand" href="/">My Website</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+<!--
+  ┌───────────────────────────────────────────────────────────────────────┐
+  │  DIRECTION CONTRACT — do not delete. Re-read before every edit.        │
+  ├───────────────────────────────────────────────────────────────────────┤
+  │  THESIS: A UX lead's portfolio built as an ikebana arrangement — every │
+  │  section is an asymmetric triangle of primary line, supporting fact,   │
+  │  and artifact, with the space between them held charged, never filled. │
+  │  It refuses the centered hero, the card grid, and the scroll reveal.   │
+  │                                                                       │
+  │  OWN-WORLD: Plaster ground (#E9E7E0), pine-ink text (#2B2822), one     │
+  │  iris-blue accent (#37479A) marking only what is active, a dark-bronze │
+  │  base (#322D24) as the vessel. Libre Caslon Display for primary lines  │
+  │  at wall scale; Archivo in tracked small-caps for the margin rail of   │
+  │  labels. Hairline rules, no fills, no shadows. A persistent left       │
+  │  label-rail; content offset right; the right edge never reached.      │
+  │                                                                       │
+  │  STORY: The visitor understands this person makes complexity legible,  │
+  │  believes it because the page itself proves it, then emails /          │
+  │  downloads the résumé / opens LinkedIn.                                │
+  │                                                                       │
+  │  FIRST VIEWPORT: Left rail — name + role in small caps. Primary line — │
+  │  the positioning statement in Caslon, ragged right, upper-left of the  │
+  │  main column. Headshot in a thin keyline frame, offset low-right,      │
+  │  smaller than expected. Charged empty wedge centre. "Selected work"    │
+  │  quiet, bottom-left. "Contact" top-right, understated.                 │
+  │                                                                       │
+  │  FORM: Ikebana / tokonoma "ma" — candidate 3 of the challenger hand,   │
+  │  user-selected over the roll; seed key a102a866.                       │
+  │                                                                       │
+  │  FINISH: unreviewed and undocumented is unfinished; this build ends    │
+  │  with the finish review, the verdict, DESIGN.md, and every shipping    │
+  │  raster carrying its provenance.                                       │
+  └───────────────────────────────────────────────────────────────────────┘
+
+  ═════════════════════════════════════════════════════════════════════════
+  TWO KINDS OF STAND-IN CONTENT ON THIS PAGE
+  ───────────────────────────────────────────────────────────────────────
+
+  1. HARD PLACEHOLDERS  —  class="ph"  (iris dashed underline on the page)
+     Things only you can supply. Nothing here is a guess.
+       • Zerik        title, masthead, hero, footer (×2)
+       • [HEADSHOT]         hero image
+       • [LOGO 1–6]         proof strip, option A
+       • [NAME]             the three testimonial attributions
+       • EMAIL_ADDRESS      mailto, in contact + footer
+       • LINKEDIN_URL       contact + footer
+       • assets/resume.pdf  contact + footer
+       • #case-1 / 2 / 3    the href on each case card
+
+  2. DRAFT COPY  —  attribute data-draft="true"  (renders clean, no marker)
+     Written FOR you as a starting point, in a senior consulting-design
+     voice, from the little I know: UX/visual design lead, enterprise
+     clients, CXO-level work. All of it is invented and safe to rewrite:
+       • positioning statement, role label, meta description
+       • the credibility stat (every number is made up)
+       • all 3 case studies — year, outcome, problem, role (invented
+         clients + invented metrics; replace with your real projects)
+       • capabilities (6) and tools (8)
+       • the 3 testimonial quotes + their role / company lines
+       • the About paragraph
+       • the closing line
+
+     To find every draft line:  search this file for  data-draft
+     Nothing in group 2 is a claim you have made. Treat it as a script to
+     edit, not copy to approve.
+  ═════════════════════════════════════════════════════════════════════════
+-->
+
+  <a class="skip-link" href="#work">Skip to selected work</a>
+
+  <header class="masthead">
+    <div class="wrap masthead__inner">
+      <a class="masthead__name" href="#top">Zerik</a>
+      <a class="masthead__contact" href="#contact">Contact</a>
+    </div>
   </header>
 
-  <main>
-    <section class="hero container">
-      <h1>Welcome to My Website</h1>
-      <p>Replace this with a short, punchy sentence about what you do.</p>
-      <a class="btn" href="#contact">Get in touch</a>
-    </section>
+  <main id="top">
 
-    <section id="about" class="container">
-      <h2>About</h2>
-      <p>Write a paragraph or two here.</p>
-    </section>
+    <!-- ═══════════════════════ 1 · HERO ═══════════════════════ -->
+    <section class="hero" aria-labelledby="hero-primary">
+      <div class="wrap hero__grid">
+        <p class="rail hero__id">
+          Zerik
+          <span class="rail__sub" data-draft="true">UX &amp; Visual Design Lead</span>
+        </p>
 
-    <section id="features" class="container">
-      <h2>Features</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Fast</h3>
-          <p>Plain HTML and CSS. No build step required.</p>
-        </article>
-        <article class="card">
-          <h3>Responsive</h3>
-          <p>Looks good on phones, tablets, and desktops.</p>
-        </article>
-        <article class="card">
-          <h3>Easy to deploy</h3>
-          <p>Push to GitHub and enable Pages.</p>
-        </article>
+        <!-- DRAFT. One sentence, who you help and what changes for them. -->
+        <h1 class="primary hero__primary" id="hero-primary" data-draft="true">
+          I turn tangled, high-stakes enterprise products into decisions
+          users trust and executives can defend.
+        </h1>
+
+        <!-- Replace this div with:
+             <img src="assets/headshot.jpg" alt="Zerik" width="800" height="1000" />
+             Portrait crop, roughly 4:5, plain background works best here. -->
+        <figure class="hero__portrait">
+          <div class="placeholder-box placeholder-box--portrait"><span>[HEADSHOT]</span></div>
+          <figcaption class="rail__sub">Fig. 00</figcaption>
+        </figure>
+
+        <a class="hero__cue" href="#work">Selected work<span aria-hidden="true"> ↓</span></a>
       </div>
     </section>
 
-    <section id="contact" class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <!-- ═══════════════════ 2 · PROOF STRIP ═══════════════════ -->
+    <!--
+      TWO treatments are built below. At the content pass, keep the ONE you
+      have real assets for and DELETE the other block entirely.
+        2A — logo row: needs recognizable client / employer names.
+        2B — stat:     needs one honest, checkable number (or set of them).
+    -->
+    <section class="proof" aria-label="Track record">
+      <div class="wrap proof__grid">
+        <p class="rail">Trusted&nbsp;by</p>
+        <p class="proof__either">Two treatments below. Keep one, delete the other.</p>
+
+        <p class="rail proof__optlabel">Option A · logos</p>
+        <!-- 2A · LOGO ROW — replace each <span> with an <img> wordmark (SVG best) -->
+        <ul class="proof__logos" data-proof="logos">
+          <li class="placeholder-box placeholder-box--logo"><span>[LOGO 1]</span></li>
+          <li class="placeholder-box placeholder-box--logo"><span>[LOGO 2]</span></li>
+          <li class="placeholder-box placeholder-box--logo"><span>[LOGO 3]</span></li>
+          <li class="placeholder-box placeholder-box--logo"><span>[LOGO 4]</span></li>
+          <li class="placeholder-box placeholder-box--logo"><span>[LOGO 5]</span></li>
+          <li class="placeholder-box placeholder-box--logo"><span>[LOGO 6]</span></li>
+        </ul>
+
+        <p class="rail proof__optlabel">Option B · stat</p>
+        <!-- 2B · STAT — DRAFT. Every number here is invented. -->
+        <p class="proof__stat" data-proof="stat" data-draft="true">
+          <span class="primary primary--md">15 years in enterprise design. 40+ engagements across financial
+          services, insurance, logistics, and healthcare. Regular presenter to C-suite and board.</span>
+          <span class="rail__sub">Consulting and in-house, from problem framing to shipped systems.</span>
+        </p>
+      </div>
     </section>
+
+    <!-- ═══════════════════ 3 · SELECTED WORK ═══════════════════ -->
+    <section class="work" id="work" aria-labelledby="work-primary">
+      <div class="wrap">
+        <h2 class="primary work__primary" id="work-primary">Selected work</h2>
+        <p class="work__note">Problem, role, and outcome are on the card. The full
+          study is one click further.</p>
+      </div>
+
+      <ol class="work__list">
+
+        <!-- ── CASE 1 ──  DRAFT / INVENTED. Set href to the real case-study URL. -->
+        <li class="case">
+          <a class="case__link wrap" href="#case-1">
+            <p class="rail case__year"><span data-draft="true">2024</span></p>
+            <h3 class="primary primary--md case__outcome" data-draft="true">Redesigned the underwriting
+              workspace and brought average quote turnaround from three days down to under four hours.</h3>
+            <p class="case__problem">
+              <span class="case__label">Problem</span>
+              <span data-draft="true">Underwriters worked across seven disconnected tools and a
+              40-field intake form. New hires took months to get productive, and the backlog kept growing.</span>
+            </p>
+            <p class="case__role">
+              <span class="case__label">My role</span>
+              <span data-draft="true">Design lead: discovery research, information architecture,
+              interaction design, design system, executive reviews.</span>
+            </p>
+            <figure class="case__thumb">
+              <div class="placeholder-box placeholder-box--thumb"><span>[CASE 1 — IMAGE]</span></div>
+            </figure>
+            <span class="case__cue">Read the case<span aria-hidden="true"> →</span></span>
+          </a>
+        </li>
+
+        <!-- ── CASE 2 ──  DRAFT / INVENTED -->
+        <li class="case">
+          <a class="case__link wrap" href="#case-2">
+            <p class="rail case__year"><span data-draft="true">2023</span></p>
+            <h3 class="primary primary--md case__outcome" data-draft="true">Merged four regional reporting
+              tools into one platform, now used by every trading desk in the division.</h3>
+            <p class="case__problem">
+              <span class="case__label">Problem</span>
+              <span data-draft="true">Leadership had no consistent view of risk across regions. Each
+              team had built its own reporting stack, with its own definitions and its own numbers.</span>
+            </p>
+            <p class="case__role">
+              <span class="case__label">My role</span>
+              <span data-draft="true">Principal designer: stakeholder alignment, service blueprint,
+              prototyping, design direction for two delivery squads.</span>
+            </p>
+            <figure class="case__thumb">
+              <div class="placeholder-box placeholder-box--thumb"><span>[CASE 2 — IMAGE]</span></div>
+            </figure>
+            <span class="case__cue">Read the case<span aria-hidden="true"> →</span></span>
+          </a>
+        </li>
+
+        <!-- ── CASE 3 ──  DRAFT / INVENTED -->
+        <li class="case">
+          <a class="case__link wrap" href="#case-3">
+            <p class="rail case__year"><span data-draft="true">2021</span></p>
+            <h3 class="primary primary--md case__outcome" data-draft="true">Shipped a field operations app
+              that retired paper workflows for more than 3,000 warehouse staff across 14 sites.</h3>
+            <p class="case__problem">
+              <span class="case__label">Problem</span>
+              <span data-draft="true">Critical processes ran on clipboards and tribal knowledge.
+              Mistakes stayed invisible until they reached the customer.</span>
+            </p>
+            <p class="case__role">
+              <span class="case__label">My role</span>
+              <span data-draft="true">Design lead: field research, concept design, usability testing,
+              phased rollout support.</span>
+            </p>
+            <figure class="case__thumb">
+              <div class="placeholder-box placeholder-box--thumb"><span>[CASE 3 — IMAGE]</span></div>
+            </figure>
+            <span class="case__cue">Read the case<span aria-hidden="true"> →</span></span>
+          </a>
+        </li>
+
+      </ol>
+      <!-- Add a 4th/5th case by copying an <li class="case"> block. Past 5,
+           the "scannable in 5 seconds" bar starts to break. -->
+    </section>
+
+    <!-- ═══════════════════ 4 · KEY SKILLS ═══════════════════ -->
+    <section class="skills" id="skills" aria-labelledby="skills-primary">
+      <div class="wrap skills__grid">
+        <h2 class="primary skills__primary" id="skills-primary">What I do, and what I do it with</h2>
+
+        <!-- DRAFT. Name the discipline, not a tool. 4–7 items. -->
+        <p class="rail">Capabilities</p>
+        <ul class="skills__set" data-draft="true">
+          <li>Design strategy and product vision</li>
+          <li>Research and problem framing</li>
+          <li>Information architecture and service design</li>
+          <li>Interaction design and design systems</li>
+          <li>Prototyping and concept validation</li>
+          <li>Executive alignment and design facilitation</li>
+        </ul>
+
+        <!-- DRAFT. Swap for the tools you actually work in. -->
+        <p class="rail">Tools</p>
+        <ul class="skills__set skills__set--inline" data-draft="true">
+          <li>Figma</li>
+          <li>FigJam</li>
+          <li>Framer</li>
+          <li>Adobe Creative Suite</li>
+          <li>Miro</li>
+          <li>Maze</li>
+          <li>Dovetail</li>
+          <li>Storybook</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ 5 · TESTIMONIALS ═══════════════════ -->
+    <section class="quotes" id="testimonials" aria-label="What colleagues say">
+      <div class="wrap"><p class="rail">In their words</p></div>
+
+      <ul class="quotes__list">
+        <!-- DRAFT quotes. Attribution names are yours to fill; roles/companies are examples. -->
+        <li class="quote wrap">
+          <blockquote class="primary primary--md quote__text" data-draft="true">A rare ability to hold the
+            executive view and the user's view at the same time. They joined a stalled program, reframed
+            it inside a week, and gave leadership a direction the whole team could get behind.</blockquote>
+          <p class="quote__by rail__sub">
+            <span class="ph">[NAME]</span>, <span data-draft="true">VP Product</span> ·
+            <span data-draft="true">enterprise SaaS</span>
+          </p>
+        </li>
+        <li class="quote wrap">
+          <blockquote class="primary primary--md quote__text" data-draft="true">The clearest design thinker
+            I have worked with. They don't just make the work look considered, they make the strategy
+            legible to everyone in the room.</blockquote>
+          <p class="quote__by rail__sub">
+            <span class="ph">[NAME]</span>, <span data-draft="true">Director of Design</span> ·
+            <span data-draft="true">Fortune 100 financial services</span>
+          </p>
+        </li>
+        <!-- Optional third — delete this <li> if you only have two. -->
+        <li class="quote wrap">
+          <blockquote class="primary primary--md quote__text" data-draft="true">We asked for a redesign and
+            came away with a design system, a shared vocabulary, and a team that could carry it forward
+            without them.</blockquote>
+          <p class="quote__by rail__sub">
+            <span class="ph">[NAME]</span>, <span data-draft="true">Head of Digital</span> ·
+            <span data-draft="true">global logistics</span>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ═══════════════════ 6 · ABOUT ═══════════════════ -->
+    <section class="about" id="about" aria-labelledby="about-primary">
+      <div class="wrap about__grid">
+        <p class="rail">Approach</p>
+        <!-- DRAFT philosophy. Rewrite in your own words. -->
+        <h2 class="primary primary--md about__primary" id="about-primary" data-draft="true">Good design inside
+          a business is mostly good decisions made visible. I work best where the problem is still ambiguous:
+          competing priorities, real constraints, and an executive who needs to weigh the trade-offs before
+          committing. My job is to turn that into a clear point of view, prototype it early enough to be wrong
+          cheaply, and bring the room along. Clients leave with a direction they can defend, not just a set of
+          screens.</h2>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 7 · RÉSUMÉ CTA + CONTACT ═══════════════ -->
+    <section class="contact" id="contact" aria-labelledby="contact-primary">
+      <div class="wrap contact__grid">
+        <p class="rail">Get in touch</p>
+        <!-- DRAFT closing line. -->
+        <h2 class="primary contact__primary" id="contact-primary" data-draft="true">Currently open to design
+          leadership roles and a small number of advisory engagements.</h2>
+
+        <ul class="contact__actions">
+          <li>
+            <!-- Replace EMAIL_ADDRESS. The subject is pre-filled; edit the text after subject= -->
+            <a class="btn" href="mailto:EMAIL_ADDRESS?subject=Portfolio%20enquiry">Email me</a>
+            <span class="rail__sub">Opens your mail app, subject line ready</span>
+          </li>
+          <li>
+            <!-- Put the PDF at assets/resume.pdf (or change the href). -->
+            <a class="link-stem" href="assets/resume.pdf" download>Download résumé <span class="rail__sub">PDF</span></a>
+          </li>
+          <li>
+            <a class="link-stem" href="LINKEDIN_URL" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> My Website. All rights reserved.</p>
+  <!-- ═══════════════════ 8 · FOOTER — the vessel ═══════════════════ -->
+  <footer class="colophon" aria-label="Site footer">
+    <div class="wrap colophon__grid">
+      <p class="colophon__name">Zerik</p>
+
+      <nav class="colophon__links" aria-label="Elsewhere">
+        <a href="LINKEDIN_URL" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="assets/resume.pdf" download>Résumé</a>
+        <a href="mailto:EMAIL_ADDRESS">Email</a>
+        <!-- add / remove: Are.na, Read.cv, Dribbble, Bluesky … -->
+      </nav>
+
+      <p class="colophon__fine">© <span id="year">2026</span> Zerik</p>
+
+      <p class="colophon__set">Set in Libre Caslon Display &amp; Archivo. Hand-built in
+        plain HTML and CSS. No framework, no tracking; one small script for the year.</p>
     </div>
   </footer>
 
